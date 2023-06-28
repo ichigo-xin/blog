@@ -1,4 +1,6 @@
 baseURL = 'https://ichigo-xin.github.io/'
-languageCode = 'en-us'
+languageCode = 'zh-cn'
 title = 'Ichigo-xin Blog'
-theme='m10c'
+theme='stack'
+
+
