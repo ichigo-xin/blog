@@ -1,0 +1,4 @@
+[submodule "ichigo-xin-Blog/public"]
+	path = ichigo-xin-Blog/public
+	url = git@github.com:ichigo-xin/ichigo-xin.github.io.git
+	branch = main
