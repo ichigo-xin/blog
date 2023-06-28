@@ -5,3 +5,6 @@
 [submodule "ichigo-xin-Blog/themes/m10c"]
 	path = ichigo-xin-Blog/themes/m10c
 	url = git@github.com:vaga/hugo-theme-m10c.git
+[submodule "ichigo-xin-Blog/themes/stack"]
+	path = ichigo-xin-Blog/themes/stack
+	url = git@github.com:CaiJimmy/hugo-theme-stack.git
