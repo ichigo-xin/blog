@@ -2,3 +2,6 @@
 	path = ichigo-xin-Blog/public
 	url = git@github.com:ichigo-xin/ichigo-xin.github.io.git
 	branch = main
+[submodule "ichigo-xin-Blog/themes/m10c"]
+	path = ichigo-xin-Blog/themes/m10c
+	url = git@github.com:vaga/hugo-theme-m10c.git
