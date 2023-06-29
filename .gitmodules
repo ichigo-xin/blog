@@ -8,3 +8,6 @@
 [submodule "ichigo-xin-Blog/themes/stack"]
 	path = ichigo-xin-Blog/themes/stack
 	url = git@github.com:CaiJimmy/hugo-theme-stack.git
+[submodule "ichigo-xin-Blog/themes/hugo-theme-stack"]
+	path = ichigo-xin-Blog/themes/hugo-theme-stack
+	url = git@github.com:CaiJimmy/hugo-theme-stack.git
