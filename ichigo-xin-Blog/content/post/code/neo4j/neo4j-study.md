@@ -1,6 +1,8 @@
 ---
 title: "Neo4j和知识图谱：Neo4j安装和使用"
 date: 2023-06-28T21:00:04+08:00
+tags: [neo4j, KG]
+categories: [code]
 ---
 
 在本篇文章中，我会对Neo4j图数据库、查询语句Cypher进行介绍，这样可以让你更容易掌握这门技术。其中主要包括Neo4j的安装配置，查询语句Cypher使用。
