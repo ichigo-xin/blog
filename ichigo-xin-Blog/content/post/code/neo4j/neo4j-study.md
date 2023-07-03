@@ -11,7 +11,7 @@ categories: [code]
 
 - Neo4j和知识图谱：Neo4j安装和使用
 
-- Neo4j和知识图谱：Neo4j内置算法库的安装和使用
+- [Neo4j和知识图谱：Neo4j内置算法库的安装和使用]({{< relref "/post/code/neo4j/neo4j-study-algorithm.md" >}})
 
 - Neo4j和知识图谱：使用Neo4j构建知识图谱
 

@@ -42,4 +42,5 @@ if __name__ == '__main__':
 @python.exe  E:\PythonScript\check_personnal_info.py %*
 ```
 
+在对应博客目录执行 check + 文件名 即可，如 check check.md
 ![](/imgs/check_test.png)
