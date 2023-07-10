@@ -7,7 +7,7 @@ categories: [code]
 
 在本篇文章中，我会对Neo4j图数据库、查询语句Cypher进行介绍，这样可以让你更容易掌握这门技术。其中主要包括Neo4j的安装配置，查询语句Cypher使用。
 
-本文是全系列中的第1/4篇
+本文是全系列中的第1/3篇
 
 - Neo4j和知识图谱：Neo4j安装和使用
 
@@ -15,7 +15,7 @@ categories: [code]
 
 - Neo4j和知识图谱：使用Neo4j构建知识图谱
 
-- Neo4j和知识图谱：项目中使用py2neo的ogm框架构建知识图谱
+- [Neo4j和知识图谱：项目中使用py2neo的ogm框架构建知识图谱]({{< relref "/post/code/neo4j/neo4j-study-kg.md" >}})
 
 ## Neo4j介绍
 

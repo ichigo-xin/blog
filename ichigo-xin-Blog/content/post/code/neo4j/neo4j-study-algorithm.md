@@ -8,15 +8,13 @@ image: /imgs/DM_20230703230529_001.png
 
 在本篇文章中，我会对Neo4j Graph Data Science进行介绍，并且使用其中的算法做相似分析，这样可以让你更快的了解Neo4j Graph Data Science，并将其应用到实践中。
 
-本文是全系列中的第2/4篇
+本文是全系列中的第2/3篇
 
 - [Neo4j和知识图谱：Neo4j安装和使用]({{< relref "/post/code/neo4j/neo4j-study.md" >}})
 
 - Neo4j和知识图谱：Neo4j内置算法库的安装和使用
 
-- Neo4j和知识图谱：使用Neo4j构建知识图谱
-
-- Neo4j和知识图谱：项目中使用py2neo的ogm框架构建知识图谱
+- [Neo4j和知识图谱：使用Neo4j构建知识图谱]({{< relref "/post/code/neo4j/neo4j-study-kg.md" >}})
 
 ## Neo4j Graph Data Science介绍
 
@@ -201,6 +199,7 @@ ORDER BY similarity DESCENDING, Person1, Person2
 ```
 
 语法解析：
+
 1. CALL gds.nodeSimilarity.stream('myGraph') 在myGraph投影中使用nodeSimilarity相似分析算法
 2. YIELD node1, node2, similarity  使用节点node1、node2和相似度similarity
 3. RETURN gds.util.asNode(node1).name AS Person1, gds.util.asNode(node2).name AS Person2, similarity 返回结果
