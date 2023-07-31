@@ -1,5 +1,5 @@
 ---
-title: "手写Spring整合Jpa流程和Spring Data JPA源码解析"
+title: "手写Spring整合Jpa流程"
 date: 2023-07-26T21:56:50+08:00
 draft: false
 tags: [Spring Data JPA]
