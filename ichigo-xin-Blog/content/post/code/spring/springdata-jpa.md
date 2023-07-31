@@ -7,7 +7,7 @@ categories: [code, spring]
 
 ---
 
-在本篇文章中，我将手写模拟Spring整合Jpa流程，之后也会带你一起看Spring Data JPA的源码来进行验证。
+在本篇文章中，我将手写模拟Spring整合Jpa流程。
 
 ## 项目搭建
 
@@ -502,7 +502,3 @@ public class MyJpaClassPathBeanDefinitionScanner extends ClassPathBeanDefinition
 运行代码，成功查询出来数据了。
 ![](/imgs/springdatajpa-8.png)
 同时我们也可以看下代理对象
-![](/imgs/springdatajpa-9.png)
-
-
-## 源码
