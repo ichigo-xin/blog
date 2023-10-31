@@ -60,9 +60,13 @@ xdel 1698732650059-0 ，这个命令跟上消息id就可以了
 xread count 10 streams race:italy 0-0 从头开始消费，消费10个
 还可以制定阻塞的方式来消费
 xread block 0 streams race:italy $ 从最新的消息开始消费，block后面接上阻塞时间，0代表一直阻塞，我们在另一个客户端添加上信息，这边就可以消费到了。
+
 ![](/imgs/redis_stream2.png)
+
 ![](/imgs/redis_stream3.png)
+
 ![](/imgs/redis_stream4.png)
+
 如果是单个消费者这样的话，就需要记录当前的消费位置，然后继续消费位置继续向下消费就可以了，也可以消费完了直接删除也行。
 
 ## 消费组
@@ -110,36 +114,49 @@ race:italy stream名
 这时候对于这个消费组来说已经消费了2条消息，此时，消费组中的另一个消费者来消费，也只会消费到第三条消息
 XREADGROUP GROUP italy_riders Bob COUNT 1 STREAMS race:italy >
 ![](/imgs/redis_stream7.png)
+
 我这显示第4条消息，是因为我之前执行了一次上面的命令
 
 这样同一个消费组就可以做负载均衡了，对于一堆消息，有多个客户端来消费，每个客户端相互独立，消息也只会被一个客户端消费。
 
 **确认数据**
+
 消费完数据之后，需要ack，这样才会在每个消费者的pending中移除该次消息。
+
 查看当前消费情况 xinfo stream race:italy
+
 ![](/imgs/redis_stream8.png)
+
 length 当前有5条数据
 groups 一个消费组
 last-generated-id 最后一条消息id
 first-entry和last-entry 第一条消息和最后一条消息
 
 查看消费组情况  xinfo groups race:italy
+
 ![](/imgs/redis_stream9.png)
+
 name  组名
 consumers  消费者个数
 pending 未ack的消息数
 last-delivered-id  最后一条消费消息id
 
 查看消费者情况 xinfo consumers race:italy italy_riders
+
 ![](/imgs/redis_stream10.png)
+
 name  消费者名
 pending  未ack的消息个数
 
 使用ack命令确认数据  xack race:italy italy_riders 1698738784018-0
 
 **查看pending队列**
+
+
 XPENDING race:italy italy_riders - + 10
+
 ![](/imgs/redis_stream10.png)
+
 里面显示了每个未ack的消息的情况，其中第四个字段表示被消费的次数，如果Alice再一次消费，并且未ack的话，这个值就会加1
 
 在客户端消费者读取 Stream 消息时，Redis 服务器将消息回复给客户端的过程中，客户端突然断开了连接，消息就丢失了。但是 PEL 里已经保存了发出去的消息 ID。待客户端重新连上之后，可以再次收到 PEL 中的消息 ID 列表。不过此时 xreadgroup 的起始消息 ID 不能为参数>，而必须是任意有效的消息 ID，一般将参数设为 0-0，表示读取所有的 PEL 消息以及自last_delivered_id之后的新消息。
