@@ -37,4 +37,4 @@ categories: [InternLM]
 
 测试微调模型
 
-![训练结束](/imgs/InternLM-4-6.png "训练结束")
+![测试微调模型](/imgs/InternLM-4-6.png "测试微调模型")
